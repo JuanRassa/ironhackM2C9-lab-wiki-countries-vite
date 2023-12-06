@@ -11,7 +11,7 @@ const HomePage = () => {
       setCountriesData(res.data);
     });
   }, []);
-  console.log('countriesData', countriesData);
+  console.log('countriesData: ', countriesData);
   return (
     <div className='container' style={{ maxHeight: '90vh', overflow: 'scroll' }}>
       <h1 style={{ fontSize: '24px' }}>WikiCountries: Your Guide to the World</h1>

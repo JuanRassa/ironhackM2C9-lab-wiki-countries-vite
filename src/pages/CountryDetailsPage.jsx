@@ -11,7 +11,7 @@ const CountryDetailsPage = () => {
     axios.get(`https://ih-countries-api.herokuapp.com/countries/${countryId}`).then(res => setCountryData(res.data));
   }, [countryId]);
 
-  console.log('countryData', countryData);
+  console.log('countryData: ', countryData);
   return (
     <div className='container'>
       <p style={{ fontSize: '24px', fontWeight: 'bold' }}>Country Details</p>
