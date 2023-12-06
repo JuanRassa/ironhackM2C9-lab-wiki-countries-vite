@@ -3,5 +3,17 @@
   text-align: center;
 }
 .world-loader {
+  margin-top: 50px;
   border-radius: 50%;
+}
+.country-item-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  padding: 20px 0;
+}
+.tiny-flag {
+  max-width: 70px;
 }
