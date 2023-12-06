@@ -7,16 +7,20 @@ const HomePage = () => {
   const [countriesData, setCountriesData] = useState(null);
 
   useEffect(() => {
-    axios.get(' https://ih-countries-api.herokuapp.com/countries').then(res => {
+    axios.get('https://ih-countries-api.herokuapp.com/countries').then(res => {
       setCountriesData(res.data);
-      console.log('data', res.data);
     });
   }, []);
   console.log('countriesData', countriesData);
   return (
     <div className='container' style={{ maxHeight: '90vh', overflow: 'scroll' }}>
       <h1 style={{ fontSize: '24px' }}>WikiCountries: Your Guide to the World</h1>
-      {!countriesData && <img className='world-loader' src={worldGifLoader} />}
+      {!countriesData && (
+        <div className='world-loader'>
+          <h3>Loading countries of the world...</h3>
+          <img src={worldGifLoader} />
+        </div>
+      )}
       {countriesData && (
         <div className='list-group'>
           {countriesData.map(country => (
@@ -26,7 +30,7 @@ const HomePage = () => {
                 src={`https://flagpedia.net/data/flags/icon/72x54/${country.alpha2Code.toLowerCase()}.png`}
                 alt={country.name.official}
               />
-              {country.name.official}
+              {country.name.common}
             </Link>
           ))}
         </div>

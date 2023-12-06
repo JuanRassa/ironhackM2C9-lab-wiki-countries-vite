@@ -4,6 +4,11 @@
 }
 .world-loader {
   margin-top: 50px;
+}
+.world-loader h3 {
+  margin: 0 0 8px;
+}
+.world-loader img {
   border-radius: 50%;
 }
 .country-item-list {
@@ -16,4 +21,7 @@
 }
 .tiny-flag {
   max-width: 70px;
+}
+ul {
+  list-style: none;
 }
