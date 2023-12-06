@@ -2,3 +2,6 @@
   margin: 0 auto;
   text-align: center;
 }
+.world-loader {
+  border-radius: 50%;
+}
